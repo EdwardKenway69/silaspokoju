@@ -1,0 +1,489 @@
+:root{
+  /* Kolory i zmienne */
+  --granat-900: #0b2340;
+  --granat-700: #123a5a;
+  --niebieski-400: #5aa6d8;
+  --beż: #f3e9dc;
+  --biały: #ffffff;
+  --muted: #6b7280;
+  --radius: 12px;
+  --container: 1100px;
+  --shadow: 0 6px 20px rgba(11,35,64,0.12);
+  --header-height: 76px; /* domyślna, nadpisywana przez JS */
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color-scheme: light;
+  box-sizing: border-box;
+}
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* Reset podstawowy */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background: linear-gradient(180deg, var(--beż) 0%, #ffffff 100%);
+  color: var(--granat-900);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/* Container */
+.container{
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+/* SITE HEADER - fixed */
+.site-header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(90deg, rgba(11,35,64,0.95), rgba(18,58,90,0.95));
+  color: var(--biały);
+  z-index: 1000;
+  box-shadow: 0 4px 24px rgba(2,6,23,0.25);
+  /* wysokość określana przez padding/treść; JS aktualizuje --header-height */
+}
+
+/* Header inner */
+.header-inner{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.9rem 1.5rem;
+}
+
+/* Ukrycie grafiki logo (jeśli pozostała w HTML) */
+.logo {
+  display: none !important;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* Brand tekstowy */
+.brand{
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-shrink: 0;
+}
+.brand-text h1{
+  margin: 0;
+  font-size: 1.35rem;
+  line-height: 1;
+  color: var(--beż);
+  font-weight: 900;
+  text-shadow: 0 2px 10px rgba(2,6,23,0.36);
+  letter-spacing: 0.2px;
+}
+.brand-text .tagline{
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--beż);
+  opacity: 0.95;
+}
+
+/* NAV */
+.nav{
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.nav-link{
+  color: rgba(255,255,255,0.92);
+  text-decoration: none;
+  padding: 0.5rem;
+  font-weight: 600;
+  border-radius: 8px;
+}
+.nav-link:hover{
+  background: rgba(255,255,255,0.04);
+}
+.nav-cta{
+  background: var(--beż);
+  color: var(--granat-900);
+  padding: 0.5rem 0.8rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: 0 6px 18px rgba(11,35,64,0.12);
+}
+
+/* Główny offset by zawartość nie była pod headerem */
+main{
+  padding-top: var(--header-height);
+}
+
+/* HERO */
+.hero{
+  padding: 3rem 0;
+}
+.hero-grid{
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 2rem;
+  align-items: center;
+}
+.hero-left h2{
+  font-size: 2rem;
+  margin: 0 0 0.5rem;
+  color: var(--granat-900);
+}
+.lead{
+  color: var(--muted);
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+.highlights{
+  list-style: disc;
+  margin-left: 1.25rem;
+  color: var(--granat-700);
+  padding-left: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+/* Cover card */
+.cover-card{
+  background: linear-gradient(180deg, var(--biały), #f7f9fb);
+  padding: 1rem;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+.cover{
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;
+}
+.cover-badge{
+  margin-top: .75rem;
+  background: var(--niebieski-400);
+  color: #fff;
+  display: inline-block;
+  padding: .35rem .6rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.secure{
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* PURCHASE */
+.purchase{
+  margin-top: 1.25rem;
+}
+.price{
+  font-size: 1.1rem;
+  margin-bottom: .5rem;
+}
+.payment-methods{
+  font-size: .95rem;
+  color: var(--muted);
+}
+.methods{
+  display: flex;
+  gap: .5rem;
+  list-style: none;
+  padding: 0;
+  margin: .5rem 0 0;
+  flex-wrap: wrap;
+}
+.methods li{
+  background: rgba(11,35,64,0.06);
+  padding: .25rem .6rem;
+  border-radius: 8px;
+  font-weight: 600;
+  color: var(--granat-700);
+  font-size: 0.9rem;
+}
+.buttons{
+  display: flex;
+  gap: .6rem;
+  margin-top: .9rem;
+  flex-wrap: wrap;
+}
+.btn{
+  display: inline-block;
+  text-decoration: none;
+  padding: .6rem 1rem;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+.btn.primary{
+  background: var(--granat-900);
+  color: var(--biały);
+  box-shadow: 0 6px 18px rgba(11,35,64,0.2);
+  border: 1px solid rgba(255,255,255,0.04);
+}
+.btn.ghost{
+  background: transparent;
+  color: var(--granat-900);
+  border: 1px solid rgba(11,35,64,0.08);
+}
+.btn.primary:hover{
+  transform: translateY(-2px);
+  transition: transform .15s ease;
+}
+.note{
+  font-size: .85rem;
+  color: var(--muted);
+  margin-top: .6rem;
+}
+
+/* CONTENT CARDS */
+.contents{
+  padding: 2.5rem 0;
+}
+.contents h3{
+  margin-top: 0;
+}
+.cards-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+.card{
+  background: var(--biały);
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(11,35,64,0.04);
+}
+.card h4{
+  margin: 0 0 .5rem;
+  color: var(--granat-700);
+  font-size: 1.05rem;
+}
+
+/* BENEFITS */
+.benefits{
+  padding: 2rem 0;
+}
+.benefits-grid{
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.benefit{
+  flex: 1 1 220px;
+  background: linear-gradient(180deg, var(--biały), #f8fbff);
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(90,166,216,0.06);
+}
+.benefit strong{display:block;margin-bottom:.35rem;color:var(--granat-700)}
+
+/* REVIEWS */
+.reviews{
+  background: linear-gradient(180deg,#f6fbff,#ffffff);
+  padding: 2.5rem 0;
+}
+.reviews-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+.review{
+  background: var(--biały);
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  border-left: 4px solid var(--niebieski-400);
+}
+.review p{margin: 0 0 0.5rem}
+.review cite{color: var(--muted); font-style: normal}
+
+/* CTA SECTION */
+.cta-section{
+  padding: 2.5rem 0;
+  text-align: center;
+}
+.cta-inner{
+  background: linear-gradient(90deg, rgba(11,35,64,0.95), rgba(18,58,90,0.95));
+  color: var(--biały);
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+/* Widoczne nagłówki w CTA */
+.cta-inner h3{
+  margin: 0 0 0.45rem;
+  color: var(--beż);
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  text-shadow: 0 3px 12px rgba(2,6,23,0.35);
+  letter-spacing: 0.2px;
+}
+.cta-inner p{
+  margin: 0 0 0.9rem;
+  color: rgba(243,233,220,0.95);
+  font-size: 1rem;
+}
+.btn.large{ padding: 0.9rem 1.4rem; font-size: 1rem; }
+
+/* FOOTER */
+.site-footer{
+  background: var(--granat-900);
+  color: var(--biały);
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+.footer-grid{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.brand-mini{ margin: 0; font-weight: 700 }
+.footer-links{
+  display: flex;
+  gap: .5rem;
+}
+.link-btn{
+  background: transparent;
+  color: var(--biały);
+  border: none;
+  cursor: pointer;
+  padding: .25rem .5rem;
+  border-radius: 8px;
+  font-weight: 600;
+}
+.link-btn:hover{
+  background: rgba(255,255,255,0.03);
+}
+
+/* MODAL: backdrop i główny kontener */
+.modal-backdrop{
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(2,6,23,0.55);
+  z-index: 1100;
+  padding: 1rem;
+  overflow-y: auto; /* dopuszcza przewinięcie jeśli viewport jest bardzo mały */
+}
+.modal-backdrop.show{
+  display: flex;
+}
+
+/* Modal jako kolumna z ograniczoną wysokością - wewnętrzne przewijanie treści */
+.modal{
+  background: var(--biały);
+  max-width: 720px;
+  width: 100%;
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: var(--shadow);
+  position: relative;
+  color: var(--granat-700);
+
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100vh - 96px);
+  overflow: hidden;
+}
+
+/* Treść modala przewijalna wewnętrznie */
+.modal-content{
+  margin-top: 0.75rem;
+  color: var(--granat-700);
+  font-size: 0.95rem;
+
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-right: 0.5rem;
+}
+
+/* Przyciski modala */
+.modal-close{
+  position: absolute;
+  right: 12px;
+  top: 8px;
+  border: none;
+  background: transparent;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: var(--granat-700);
+  z-index: 2;
+}
+
+/* Accessibility / focus outlines */
+a:focus, button:focus, .btn:focus, .link-btn:focus {
+  outline: 3px solid rgba(90,166,216,0.25);
+  outline-offset: 2px;
+  border-radius: 8px;
+}
+
+/* Efekt "pulse" dla przycisku kup teraz dodawany przez JS */
+.focus-pulse-temp{
+  box-shadow: 0 6px 20px rgba(90,166,216,0.25), 0 0 0 4px rgba(90,166,216,0.08);
+  transform: translateY(-2px);
+  transition: box-shadow .25s ease, transform .15s ease;
+}
+
+/* Drobne typograficzne poprawki */
+h1,h2,h3,h4,h5,h6{ color: var(--granat-900); margin: 0 0 .5rem; }
+p{ margin: 0 0 .75rem; }
+
+/* Responsive */
+@media (max-width: 900px){
+  .hero-grid{ grid-template-columns: 1fr; gap: 1.25rem; padding-top: 0; }
+  .header-inner{ flex-direction: row; align-items: center; gap: .5rem; padding: 0.6rem 1rem; }
+  .nav{ gap: 0.4rem; }
+  .brand-text h1{ font-size: 1.05rem; }
+  .brand-text .tagline{ display: none; }
+  .footer-grid{ flex-direction: column; gap: .6rem; align-items: flex-start; }
+  .cover-card{ padding: 0.75rem; }
+
+  /* CTA mniejsze na mobilkach */
+  .cta-inner h3{ font-size: 1.25rem; }
+}
+
+@media (max-width: 480px){
+  .header-inner{ padding: 0.5rem 0.75rem; }
+  .nav-link{ padding: 0.4rem .5rem; font-size: 0.9rem; }
+  .nav-cta{ padding: 0.4rem .6rem; font-size: 0.9rem; }
+  :root{ --header-height: 84px; } /* fallback gdy header jest silnie upakowany */
+  .modal{ max-height: calc(100vh - 48px); padding: 1rem; border-radius: 10px; }
+  .modal-content{ padding-right: 0.4rem; }
+}
+
+/* opcjonalne drobne style scrollbar (nie nadpisywać przeglądarkowych ustawień) */
+.modal-content::-webkit-scrollbar{
+  width: 10px;
+}
+.modal-content::-webkit-scrollbar-thumb{
+  background: rgba(11,35,64,0.08);
+  border-radius: 8px;
+}
