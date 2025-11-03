@@ -132,7 +132,7 @@
         <p>Płatność za Produkt cyfrowy dokonywana jest z góry za pomocą dostępnych metod płatności elektronicznych.</p>
         <p>Po zaksięgowaniu płatności Produkt cyfrowy zostaje dostarczony automatycznie na adres e-mail Klienta.</p>
         <p>Produkt jest dostępny w formacie PDF i wymaga programu umożliwiającego jego otwarcie (np. Adobe Acrobat Reader lub inny czytnik PDF).</p>
-        <p>W przypadku problemów z pobraniem lub otwarciem pliku Klient powinien skontaktować się ze Sprzedawcą pod adresem <a href="mailto:silaspokoju@gmail.com">silaspokoju@gmail.com</a>.</p>
+        <p>W przypadku problemów z pobraniem lub otwarciem pliku Klient powinien skontaktować się ze Sprzedawcą pod adresem <a href="mailto:silaspokoju7@gmail.com">silaspokoju7@gmail.com</a>.</p>
 
         <h4>§6. Prawo odstąpienia od umowy</h4>
         <p>Zgodnie z art. 38 pkt 13 ustawy o prawach konsumenta, Klient traci prawo do odstąpienia od umowy, jeśli wyraził zgodę na dostarczenie treści cyfrowej przed upływem 14 dni od zakupu.</p>
