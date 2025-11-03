@@ -17,7 +17,7 @@
       title: 'Kontakt',
       html: `
         <p>Masz pytania? Napisz do mnie:</p>
-        <p><a href="mailto:silaspokoju@gmail.com">silaspokoju@gmail.com</a></p>
+        <p><a href="mailto:silaspokoju7@gmail.com">silaspokoju7@gmail.com</a></p>
         <p>Odpowiadam zwykle w ciągu 24-48 godzin.</p>
       `
     },
@@ -36,7 +36,7 @@
         <p>Dokument został przygotowany zgodnie z RODO (Rozporządzenie UE 2016/679 z dnia 27 kwietnia 2016 r.).</p>
 
         <h4>§2. Administrator danych</h4>
-        <p>Administratorem danych osobowych jest Adrian, e-mail: <a href="mailto:silaspokoju@gmail.com">silaspokoju@gmail.com</a>.</p>
+        <p>Administratorem danych osobowych jest Adrian, e-mail: <a href="mailto:silaspokoju7@gmail.com">silaspokoju7@gmail.com</a>.</p>
         <p>W sprawach dotyczących danych osobowych można kontaktować się bezpośrednio przez ten adres e-mail.</p>
 
         <h4>§3. Zakres i cel przetwarzania danych</h4>
@@ -104,7 +104,7 @@
         <h4>Postanowienia ogólne</h4>
         <p>Niniejszy Regulamin określa zasady korzystania ze sklepu internetowego prowadzonego przez Adriana (zwanego dalej „Sprzedawcą”).</p>
 
-        <p>Kontakt ze Sprzedawcą możliwy jest wyłącznie pod adresem e-mail: <a href="mailto:silaspokoju@gmail.com">silaspokoju@gmail.com</a>.</p>
+        <p>Kontakt ze Sprzedawcą możliwy jest wyłącznie pod adresem e-mail: <a href="mailto:silaspokoju7@gmail.com">silaspokoju7@gmail.com</a>.</p>
 
         <p>Regulamin jest skierowany do Konsumentów dokonujących zakupu Produktu cyfrowego w formacie PDF.</p>
 
@@ -119,7 +119,7 @@
 
         <h4>§3. Dane Sprzedawcy</h4>
         <p><strong>Sprzedawca:</strong> Adrian</p>
-        <p><strong>Adres e-mail:</strong> <a href="mailto:silaspokoju@gmail.com">silaspokoju@gmail.com</a></p>
+        <p><strong>Adres e-mail:</strong> <a href="mailto:silaspokoju7@gmail.com">silaspokoju7@gmail.com</a></p>
         <p>Sprzedawca prowadzi sprzedaż w formie elektronicznej. Kontakt ze Sprzedawcą odbywa się wyłącznie drogą e-mailową.</p>
 
         <h4>§4. Zasady składania zamówień</h4>
@@ -141,7 +141,7 @@
 
         <h4>§7. Reklamacje</h4>
         <p>Klient ma prawo złożyć reklamację, jeśli dostarczony plik jest uszkodzony lub nie można go otworzyć.</p>
-        <p>Reklamacje należy zgłaszać drogą e-mailową na adres: <a href="mailto:silaspokoju@gmail.com">silaspokoju@gmail.com</a>.</p>
+        <p>Reklamacje należy zgłaszać drogą e-mailową na adres: <a href="mailto:silaspokoju7@gmail.com">silaspokoju7@gmail.com</a>.</p>
         <p>Reklamacja zostanie rozpatrzona w ciągu 14 dni roboczych od jej otrzymania.</p>
         <p>W przypadku uznania reklamacji Sprzedawca zobowiązuje się do ponownego dostarczenia poprawnej wersji Produktu cyfrowego.</p>
         <p>Sprzedawca nie dokonuje zwrotów pieniędzy. Reklamacje dotyczące treści merytorycznej Produktu nie stanowią podstawy do reklamacji.</p>
